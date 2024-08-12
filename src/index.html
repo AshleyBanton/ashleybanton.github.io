@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <!-- google fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
         <!--Custom Tailwind CSS & Tailwind-->
         <script src="https://cdn.tailwindcss.com"></script>
         <script>
             tailwind.config = {
               theme: {
                 extend: {
-                  fontFamily: {
-                    Archivo
-                  }
                 }
               }
             }
@@ -30,9 +32,9 @@
             <div class="bg-white row-span-12"></div>
 
             <div class="text-white bg-[#DF2B2B] hover:bg-[#0119EB] duration-500 row-span-12 col-span-2">
-                <h1>Ashley Banton</h1>
-                <h1>Software Developer</h1>
-                <h1>WIP! Rond 16-8-2024 Voltooid!</h1>
+                <h1 class="text-5xl font-black">Ashley Banton</h1>
+                <br>
+                <h1 class="text-3xl font-black">Software Developer</h1>
             </div>
 
             <div class="bg-white row-span-12"></div>
@@ -44,9 +46,9 @@
             <div class="bg-white row-span-2 col-span-2"></div>
 
             <!-- Link buttons in grid-->
-            <div class="bg-white row-span-2 hover:bg-[#0119EB] duration-500"><a href="google.com" class="w-full h-full"><button class="w-full h-full font-serif">About</button></a></div>
-            <div class="bg-white row-span-2 hover:bg-[#DF2B2B] duration-500"><a href="google.com" class="w-full h-full"><button class="w-full h-full">Projects</button></a></div>
-            <div class="bg-white row-span-2 hover:bg-[#FFF119] duration-500"><a href="google.com" class="w-full h-full"><button class="w-full h-full">Contact</button></a></div>
+            <div class="bg-white row-span-2 group hover:bg-[#0119EB] group-hover:text-white duration-500"><a href="about.html" class="w-full h-full group-hover:text-white duration-500"><button class="w-full h-full group-hover:text-white duration-500 text-3xl font-bold">About</button></a></div>
+            <div class="bg-white row-span-2 group hover:bg-[#DF2B2B] group-hover:text-white duration-500"><a href="projects.html" class="w-full h-full group-hover:text-white duration-500"><button class="w-full h-full group-hover:text-white duration-500 text-3xl font-bold">Projects</button></a></div>
+            <div class="bg-white row-span-2 group hover:bg-[#0119EB] group-hover:text-white duration-500"><a href="contact.html" class="w-full h-full group-hover:text-white duration-500"><button class="w-full h-full group-hover:text-white duration-500 text-3xl font-bold">Contact</button></a></div>
             <!-- -->
 
             <div class="bg-white row-span-2"></div>
