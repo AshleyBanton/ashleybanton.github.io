@@ -19,18 +19,22 @@
     </head>
     <body class="bg-black">
 
+      <!-- The boxes are templates for projects -->
+      <!-- 1st -->
       <div class="min-h-screen flex flex-col">
         <div class="flex-1 flex flex-col sm:flex-row">
+
           <main class="flex-1 p-2">
 
           </main>
+
           <div class="order-first sm:w-40 p-2">
 
           </div>
-          <div class="order-first sm:w-40 bg-[#FFF119] p-2">
+          <div class="order-first sm:w-40 bg-white p-2">
 
           </div>
-          <aside class="sm:w-40 bg-[#FFF119] p-2">
+          <aside class="sm:w-40 bg-white p-2">
 
           </aside>
           <aside class="sm:w-40 p-2">
@@ -39,18 +43,21 @@
         </div>
       </div>
 
+      <!-- 2nd -->
       <div class="min-h-screen flex flex-col">
         <div class="flex-1 flex flex-col sm:flex-row">
+
           <main class="flex-1 p-2">
 
           </main>
+
           <div class="order-first sm:w-40 p-2">
 
           </div>
-          <div class="order-first sm:w-40 bg-[#FFF119] p-2">
+          <div class="order-first sm:w-40 bg-white p-2">
 
           </div>
-          <aside class="sm:w-40 bg-[#FFF119] p-2">
+          <aside class="sm:w-40 bg-white p-2">
 
           </aside>
           <aside class="sm:w-40 p-2">
@@ -59,18 +66,21 @@
         </div>
       </div>
 
+      <!-- 3rd -->
       <div class="min-h-screen flex flex-col">
         <div class="flex-1 flex flex-col sm:flex-row">
+          
           <main class="flex-1 p-2">
-
+            <p class="text-white w-fit" id="box1">Sample Text</p>
           </main>
+
           <div class="order-first sm:w-40 p-2">
 
           </div>
-          <div class="order-first sm:w-40 bg-[#FFF119] p-2">
+          <div class="order-first sm:w-40 bg-white p-2">
 
           </div>
-          <aside class="sm:w-40 bg-[#FFF119] p-2">
+          <aside class="sm:w-40 bg-white p-2">
 
           </aside>
           <aside class="sm:w-40 p-2">
@@ -83,10 +93,21 @@
 
         <!-- GSAP Animations-->
         <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+
         <script>
           gsap.registerPlugin(ScrollTrigger);
 
-          gsap.to
+          gsap.to('#box1', {
+            scrollTrigger: {
+              trigger: "#box1",
+              toggleActions: "restart pause none none"
+            },
+            x: 200,
+            y: 200,
+            duration: 3,
+            rotation: 180
+          });
         </script>
     </body>
 </html>

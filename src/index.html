@@ -22,11 +22,11 @@
         <!-- First Section -->
         <div class="flex-auto grid grid-cols-7 grid-rows-26 gap-x-2 gap-y-2 w-full h-screen">
             <!--First Grid Row-->
-            <div class="bg-[#0119EB] row-span-6"></div>
-            <div class="bg-white row-span-6 col-span-2"></div>
-            <div class="bg-black row-span-6 col-span-2"></div>
-            <div class="bg-white row-span-6"></div>
-            <div class="bg-[#FFF119] row-span-6"></div>
+            <div class="bg-[#0119EB] row-span-6 -z-50" id="toprow"></div>
+            <div class="bg-white row-span-6 col-span-2 -z-50" id="toprow"></div>
+            <div class="bg-black row-span-6 col-span-2 -z-50" id="toprow"></div>
+            <div class="bg-white row-span-6 -z-50" id="toprow"></div>
+            <div class="bg-[#FFF119] row-span-6 -z-50" id="toprow"></div>
 
             <!--Second Grid Row-->
             <div class="bg-white row-span-12"></div>
@@ -46,22 +46,22 @@
             <div class="bg-white row-span-2 col-span-2"></div>
 
             <!-- Link buttons in grid-->
-            <div class="bg-white row-span-2 group hover:bg-[#0119EB] group-hover:text-white duration-500"><a href="about.html" class="w-full h-full group-hover:text-white duration-500"><button class="w-full h-full group-hover:text-white duration-500 text-3xl font-bold">About</button></a></div>
-            <div class="bg-white row-span-2 group hover:bg-[#DF2B2B] group-hover:text-white duration-500"><a href="projects.html" class="w-full h-full group-hover:text-white duration-500"><button class="w-full h-full group-hover:text-white duration-500 text-3xl font-bold">Projects</button></a></div>
-            <div class="bg-white row-span-2 group hover:bg-[#0119EB] group-hover:text-white duration-500"><a href="contact.html" class="w-full h-full group-hover:text-white duration-500"><button class="w-full h-full group-hover:text-white duration-500 text-3xl font-bold">Contact</button></a></div>
+            <div class="bg-white row-span-2 group hover:bg-[#0119EB] group-hover:text-white duration-500" id="buttonanim"><a href="about.html" class="w-full h-full group-hover:text-white duration-500"><button class="w-full h-full group-hover:text-white duration-500 text-3xl font-bold">About</button></a></div>
+            <div class="bg-white row-span-2 group hover:bg-[#DF2B2B] group-hover:text-white duration-500" id="buttonanim"><a href="projects.html" class="w-full h-full group-hover:text-white duration-500"><button class="w-full h-full group-hover:text-white duration-500 text-3xl font-bold">Projects</button></a></div>
+            <div class="bg-white row-span-2 group hover:bg-[#0119EB] group-hover:text-white duration-500" id="buttonanim"><a href="contact.html" class="w-full h-full group-hover:text-white duration-500"><button class="w-full h-full group-hover:text-white duration-500 text-3xl font-bold">Contact</button></a></div>
             <!-- -->
 
             <div class="bg-white row-span-2"></div>
 
             <!--Fourth Grid Row-->
-            <div class="bg-[#FFF119] row-span-4"></div>
-            <div class="bg-white row-span-4 col-span-2"></div>
-            <div class="bg-white row-span-4"></div>
-            <div class="bg-white row-span-4"></div>
-            <div class="bg-white row-span-4"></div>
-            <div class="bg-[#DF2B2B] row-span-4"></div>
+            <div class="bg-[#FFF119] row-span-4 -z-50 " id="bottomrow"></div>
+            <div class="bg-white row-span-4 col-span-2 -z-50 " id="bottomrow"></div>
+            <div class="bg-white row-span-4 -z-50 " id="bottomrow"></div>
+            <div class="bg-white row-span-4 -z-50 " id="bottomrow"></div>
+            <div class="bg-white row-span-4 -z-50 " id="bottomrow"></div>
+            <div class="bg-[#DF2B2B] row-span-4 -z-50 " id="bottomrow"></div>
 
-            <footer class="bg-black row-span-1 col-span-7 text-white h-fit">2022 - 2024/2025 Copyright Ashley Banton - Inspiratie door "De Stijl"</footer>
+            <footer class="bg-black row-span-1 col-span-7 text-white h-fit z-1">2022 - 2024/2025 Copyright Ashley Banton - Inspiratie door "De Stijl"</footer>
         </div>
         
         <!--End of Body display content-->
@@ -69,7 +69,8 @@
         <!-- GSAP Animations-->
         <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
         <script>
-
+            gsap.fromTo("#bottomrow", { y:"random(400, 100, 5)" }, { y: 0, duration: "random(2, 4)" });
+            gsap.fromTo("#toprow", { y:"random(-400, -100, 5)" }, { y: 0, duration: "random(2, 4)" });
         </script>
 
     </body>
