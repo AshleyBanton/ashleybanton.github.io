@@ -70,7 +70,7 @@
       <div class="min-h-screen flex flex-col">
         <div class="flex-1 flex flex-col sm:flex-row">
           
-          <main class="flex-1 p-2">
+          <main class="flex-1 p-2" id="boxtrigger">
             <p class="text-white w-fit" id="box1">Sample Text</p>
           </main>
 
@@ -100,13 +100,20 @@
 
           gsap.to('#box1', {
             scrollTrigger: {
-              trigger: "#box1",
-              toggleActions: "restart pause none none"
+              trigger: "#boxtrigger",
+              toggleActions: "restart none none none",
+              markers: true,
+              scrub: 0,
+
+              start: "10% bottom",
+              end: "top top"
             },
             x: 200,
             y: 200,
-            duration: 3,
-            rotation: 180
+            opacity: 1,
+            duration: 2,
+            rotation: 360,
+            
           });
         </script>
     </body>
