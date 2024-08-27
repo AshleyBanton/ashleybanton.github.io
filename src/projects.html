@@ -69,8 +69,9 @@
       <div class="min-h-screen flex flex-col">
         <div class="flex-1 flex flex-col sm:flex-row">
 
-          <main class="flex-1 p-2">
-
+          <main class="flex-1 p-2" id="boxtrigger2">
+            <h1 class="text-white w-fit text-7xl font-black" id="box2">Sample Text</h1>
+            <h1 class="text-white w-fit" id="box2">Example description of my project</h1>
           </main>
 
           <div class="order-first sm:w-40 p-2">
@@ -178,6 +179,27 @@
             opacity: 1
             
           });
+
+          gsap.from('#box2', {
+            scrollTrigger: {
+              trigger: "#boxtrigger2",
+              toggleActions: "restart none none none",
+              scrub: 0.5,
+
+              start: "10% bottom",
+              end: "top top",
+
+              delay: 3
+            },
+            rotationY: 180,
+            rotationX: 270,
+            x: 500,
+            y: 500,
+            opacity: 1
+            
+          });
+          
+
 
           gsap.to('#sidebox3', {
             scrollTrigger: {
