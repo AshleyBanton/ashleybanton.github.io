@@ -17,11 +17,11 @@
             }
         </script>
     </head>
-    <body>
+    <body class="bg-black">
 
 
-      <nav class="bg-white">
-        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+      <nav class="bg-white z-10">
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 z-10 sticky">
           <a href="index.html" class="flex items-center space-x-3 rtl:space-x-reverse">
               <span class="self-center text-2xl font-semibold whitespace-nowrap font-bold">Ashley Banton</span>
           </a>
@@ -31,8 +31,8 @@
                   <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
               </svg>
           </button>
-          <div class="hidden w-full md:block md:w-auto" id="navbar-default">
-            <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white">
+          <div class="hidden w-full md:block md:w-auto" id="navbar-default z-10">
+            <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white z-10">
               <li>
                 <a href="index.html" class="block py-2 px-3 text-black bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-black">Home</a>
               </li>
@@ -50,18 +50,22 @@
         </div>
       </nav>
 
-<div class="grid grid-cols-6 grid-rows-6 gap-4 w-screen h-screen">
-  <div class="row-span-4 ">1</div>
-  <div class="col-span-6 row-span-2 col-start-1 row-start-5">2</div>
-  <div class="col-start-2 row-start-4">3</div>
-  <div class="col-span-5 row-span-3 col-start-2 row-start-1">4</div>
-  <div class="col-span-4 col-start-3 row-start-4">5</div>
-</div>
+      <div class="grid grid-cols-5 grid-rows-5 gap-4 w-screen h-screen z-0 absolute">
+        <div class="bg-white z-0" id="rightrow">1</div>
+        <div class="col-span-4 bg-white z-0" id="toprow">
+          <h1 class="z-0 font-bold relative">About me</h1>
+        </div>
+        <div class="row-span-4 row-start-2 bg-white z-0" id="bottomrow">3</div>
+        <div class="col-span-4 row-span-4 row-start-2 bg-white z-0" id="leftrow">4</div>
+    </div>
   
         <!-- GSAP Animations-->
         <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
         <script>
-
+          gsap.fromTo("#bottomrow", { y:"random(400, 100, 5)" }, { y: 0, duration: "random(2, 4)" });
+          gsap.fromTo("#toprow", { y:"random(-400, -100, 5)" }, { y: 0, duration: "random(2, 4)" });
+          gsap.fromTo("#leftrow", { x:"random(400, 100, 5)" }, { x: 0, duration: "random(2, 4)" });
+          gsap.fromTo("#rightrow", { x:"random(-400, -100, 5)" }, { x: 0, duration: "random(2, 4)" });
         </script>
     </body>
 </html>
