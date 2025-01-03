@@ -52,8 +52,8 @@
 
       <div class="grid grid-cols-5 grid-rows-5 gap-4 w-screen h-screen z-0 absolute">
         <div class="bg-white z-0" id="rightrow">1</div>
-        <div class="col-span-4 bg-white z-0" id="toprow">
-          <h1 class="z-0 font-bold relative">About me</h1>
+        <div class="col-span-4 bg-white z-0" id="leftrow">
+          <h1 class="z-0 font-bold absolute">About me</h1>
         </div>
         <div class="row-span-4 row-start-2 bg-white z-0" id="bottomrow">3</div>
         <div class="col-span-4 row-span-4 row-start-2 bg-white z-0" id="leftrow">4</div>
@@ -64,7 +64,7 @@
         <script>
           gsap.fromTo("#bottomrow", { y:"random(400, 100, 5)" }, { y: 0, duration: "random(2, 4)" });
           gsap.fromTo("#toprow", { y:"random(-400, -100, 5)" }, { y: 0, duration: "random(2, 4)" });
-          gsap.fromTo("#leftrow", { x:"random(400, 100, 5)" }, { x: 0, duration: "random(2, 4)" });
+          gsap.fromTo("#leftrow", { x:"random(400, 100, 5)" }, { x: 0, duration: "2" });
           gsap.fromTo("#rightrow", { x:"random(-400, -100, 5)" }, { x: 0, duration: "random(2, 4)" });
         </script>
     </body>
